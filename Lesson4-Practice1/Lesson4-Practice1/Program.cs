@@ -21,8 +21,7 @@ namespace Lesson4_Practice1
                 if (x == y) Console.WriteLine("Значения равны");
                 if (x > y) Console.WriteLine("Значение Х больше Y на " + (x - y));
                 if (x < y) Console.WriteLine("Значение Y больше Х на " + (y - x));
-                Console.ReadLine();
-            }
+                }
             Console.ReadLine();
         }
     }
