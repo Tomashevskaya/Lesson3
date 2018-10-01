@@ -24,6 +24,7 @@ namespace Lesson5_Practice1
             }
             Console.Write("Результат равен: " + rez);
             Console.ReadLine();
+
         }
     }
 }
