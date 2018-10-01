@@ -15,7 +15,6 @@ namespace HomeWork2
                 Console.Write(i + " ");
             }
             Console.ReadLine();
-
-        }
+            }
     }
 }
