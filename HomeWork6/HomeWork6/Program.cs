@@ -12,8 +12,11 @@ namespace HomeWork6
         {
             Console.WriteLine("Введите слово: ");
             string str = Console.ReadLine();
-            int l = str.Length;
-            for (int i = l; i > 0; i--) Console.Write(str[i]); 
+            string reserve = string.Empty;
+            for (int i = str.Length - 1; i >= 0; i--)
+                reserve += str[i];
+            Console.WriteLine(reserve);
+            
             Console.ReadLine();
         }
     }
