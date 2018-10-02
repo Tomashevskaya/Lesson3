@@ -18,6 +18,7 @@ namespace HomeWork6
             Console.WriteLine(reserve);
             
             Console.ReadLine();
+
         }
     }
 }
