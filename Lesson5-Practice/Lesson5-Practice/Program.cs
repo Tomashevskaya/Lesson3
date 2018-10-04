@@ -28,6 +28,7 @@ namespace Lesson5_Practice
                     case '-':
                         max = middle;
                         break;
+
                 }
             }
             if (max == min) Console.WriteLine("Это число " + max);
