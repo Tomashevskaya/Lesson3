@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace AudioPlayer
 {
-    class Album
+    public class Album
     {
-        String Name;
-        Song[] songs;
-        Artist Artists;
+        public String NameOfAlbum;
+        public Song[] songsOfThisAlbum;
+        public Artist ArtistsOfAlbum;
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AudioPlayer
 {
-    class Song
+    public class Song
     {
-        String Name;
-        Artist Artist;
-        Genre Genre;
-        int Duration;
+        public String NameOfSong;
+        public Artist ArtistOfSong;
+        public Genre GenreOfSong;
+        public int DurationOfSong;
     }
 }

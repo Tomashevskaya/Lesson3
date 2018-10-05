@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AudioPlayer
 {
-    class Genre
+    public class Genre
     {
-        String Name;
+        public String NameOfGenre;
 
     }
 }
