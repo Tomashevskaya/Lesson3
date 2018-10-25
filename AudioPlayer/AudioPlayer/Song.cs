@@ -12,5 +12,10 @@ namespace AudioPlayer
         public Artist ArtistOfSong;
         public Genre GenreOfSong;
         public int DurationOfSong;
+    public Song(int x1, int x2, string x3)
+        {
+
+        }
+
     }
 }

@@ -44,5 +44,25 @@ namespace AudioPlayer
             this.Volume--;
             //_volume--;
         }
+        public void Add(string Artist, string Song)
+        {
+
+        }
+        public void Add(string Album, string PlayList)
+        {
+
+        }
+        public bool Play()
+        {
+            return true;
+        }
+        public bool Stop()
+        {
+            return true;
+        }
+
+        Console.WriteLine(AudioPlayer.Play);     
+
+        }
     }
 }

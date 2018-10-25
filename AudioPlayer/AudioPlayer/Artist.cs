@@ -10,5 +10,16 @@ namespace AudioPlayer
     {
         public string Name;
         public Song[] songsOfThisArtist;
+    public Artist(int number)
+        {
+            int x1 = number;
+            Console.WriteLine("Проигрывается песня № "+ x1);
+        }
+    public Artist(int number, string nameOfAlbum)
+        {
+            int x1 = number;
+            string x2 = nameOfAlbum;
+            Console.WriteLine("Проигрывается песня № " + x1 + " из альбома " + x2);
+        }
     }
 }

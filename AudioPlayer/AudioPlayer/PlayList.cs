@@ -10,5 +10,9 @@ namespace AudioPlayer
     {
         public String NameOfPlayList;
         public Song[] songsOfThisPlayList;
+        public PlayList(string name, double duration)
+        {
+            Console.WriteLine("Название песни: {0}, продолжительность: {1} минут", name, duration);
+        }
     }
 }
