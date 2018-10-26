@@ -8,8 +8,10 @@ namespace AudioPlayer
 {
     public class Artist
     {
-        public string ArtistName;
+        
+        public string Name { get; set; }
         public List<Song> Songs { get; set; }
+        public Album[] Albums { get; set; }
 
         public Artist()
         {

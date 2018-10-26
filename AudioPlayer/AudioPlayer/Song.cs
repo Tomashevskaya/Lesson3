@@ -10,7 +10,8 @@ namespace AudioPlayer
     {
         public String Name;
         public Artist Artist;
-        public Genre Genre;
+        public Genres Genre { get; set; }
+        public Album Album { get; set; }
 
         public string Lyrics { get; set; }
         public string Title { get; set; }

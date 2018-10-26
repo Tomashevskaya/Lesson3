@@ -14,5 +14,9 @@ namespace AudioPlayer
         {
             Console.WriteLine("Название песни: {0}, продолжительность: {1} минут", name, duration);
         }
+        public void Add(params Song[] songs)
+        {
+            Songs = songs.ToList<Song>();
+        }
     }
 }
