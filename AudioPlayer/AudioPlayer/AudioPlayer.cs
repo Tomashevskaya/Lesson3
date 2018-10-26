@@ -77,7 +77,7 @@ namespace AudioPlayer
         
 
 
-        public bool Play(out Song playingSong)
+        public bool Play(out Song playingSong, bool loop = false)
         {
             playingSong = PlayingSong = PlayingSong ?? Songs[0];
             if (Locked == false)
@@ -86,7 +86,8 @@ namespace AudioPlayer
             }
             if (IsPlaying)
             {
-                for (int i = 0; i < 5; i++)
+                int times = loop ? 5 : 1;
+                for (int i = 0; i < times; i++)
                 {
                     foreach (var song in Songs)
                     {
@@ -118,6 +119,54 @@ namespace AudioPlayer
         {
             return Locked = false;
         }
-                    
+
+
+        public void Shuffle()
+        {
+            List<Song> suffledSongs = new List<Song>();
+            int step = 3;
+            for (int i = 0; i < step; i++)
+            {
+                int songNumber = i;
+
+                while (songNumber < Songs.Count)
+                {
+                    suffledSongs.Add(Songs[songNumber]);
+                    songNumber += step;
+                }
+            }
+
+            Songs = suffledSongs;
+        }
+
+
+        public void SortByTitle()
+        {
+            List<string> names = new List<string>();
+            List<Song> sorted = new List<Song>();
+
+            foreach (var song in Songs)
+            {
+                names.Add(song.Title);
+            }
+
+            names.Sort();
+
+            foreach (var name in names)
+            {
+                foreach (var song in Songs)
+                {
+                    if (song.Title == name)
+                    {
+                        sorted.Add(song);
+                        continue;
+                    }
+                }
+            }
+
+            Songs = sorted;
+        }
     }
 }
+
+ 
