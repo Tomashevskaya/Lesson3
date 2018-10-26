@@ -9,7 +9,7 @@ namespace AudioPlayer
     public class Album
     {
         public String NameOfAlbum;
-        public Song[] songsOfThisAlbum;
-        public Artist ArtistsOfAlbum;
+        public List<Song> Songs { get; set; }
+        public Artist Artist;
     }
 }
