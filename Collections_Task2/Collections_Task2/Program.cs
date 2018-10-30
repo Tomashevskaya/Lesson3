@@ -11,34 +11,70 @@ namespace Collections_Task2
     {
         static void Main(string[] args)
         {
-            List<Song> poem = new List<Song>();
-            for (int i = 0; i < 5; i++)
+            //ArrayListPoem();
+            NeighborList();
+            Console.ReadLine();
+        }
+
+
+            public static void ArrayListPoem()
             {
+                List<Song> poem = new List<Song>();
+                for (int i = 0; i < 5; i++)
+                {
                 var song = new Song();
                 Console.WriteLine("Введите строку");
                 song.Lyrics = Console.ReadLine();
                 poem.Add(song);
-            }
-            //poem.Sort();
-            poem.RemoveAt(poem.Count - 1);
-            object[] poem2 = poem.ToArray();
+                }
+                //poem.Sort();
+                poem.RemoveAt(poem.Count - 1);
+                object[] poem2 = poem.ToArray();
 
-            foreach (var item in poem2)
-            {
-                Console.WriteLine(item);
-            }
+                    foreach (var item in poem2)
+                    {
+                        Console.WriteLine(item);
+                    }
             
-            Console.ReadLine();
-        }
-    }
-    public class Song
-    {
-        public string Lyrics;
-
-        public override string ToString()
+                Console.ReadLine();
+            }
+    
+        public class Song
         {
-            return this.Lyrics;
+            public string Lyrics;
+
+            public override string ToString()
+            {
+                return this.Lyrics;
+            }
         }
+             public class Neighbor
+             {
+                public string FullName { get; set; }
+                public string FlatNumber { get; set; }
+                public int PhoneNumber { get; set; }
+
+                public override string ToString()
+                {
+                return "Имя: " + FullName + "\n" + "Номер телефона: " + PhoneNumber;
+                }
+             }
+
+            public static void NeighborList()
+            {
+            Neighbor person = new Neighbor();
+            List<Neighbor> floorNeighbors = new List<Neighbor>();
+
+            floorNeighbors.Add(new Neighbor() { FullName = "Александр", FlatNumber = "34", PhoneNumber = 8949855 });
+            floorNeighbors.Add(new Neighbor() { FullName = "Анастасия", FlatNumber = "35", PhoneNumber = 8894729 });
+            floorNeighbors.Add(new Neighbor() { FullName = "Ирина", FlatNumber = "37", PhoneNumber = 7164656 });
+
+            Console.WriteLine("Введите номер квартиры: ");
+            string numb = Convert.ToString(Console.ReadLine());
+
+            Console.WriteLine("Данные о соседе: \n{0}", floorNeighbors.Find(x => x.FlatNumber.Contains(numb)));
+
+            }
     }
     
 }
