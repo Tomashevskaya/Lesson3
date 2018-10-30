@@ -8,14 +8,21 @@ namespace AudioPlayer
 {
     public class Artist
     {
-        public string Name;
-        public Song[] songsOfThisArtist;
-    public Artist(int number)
+        
+        public string Name { get; set; }
+        public List<Song> Songs { get; set; }
+        public Album[] Albums { get; set; }
+
+        public Artist()
+        {
+            Console.WriteLine();
+        }
+        public Artist(int number)
         {
             int x1 = number;
             Console.WriteLine("Проигрывается песня № "+ x1);
         }
-    public Artist(int number, string nameOfAlbum)
+        public Artist(int number, string nameOfAlbum)
         {
             int x1 = number;
             string x2 = nameOfAlbum;
