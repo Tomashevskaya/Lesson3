@@ -11,7 +11,7 @@ namespace Collections_Task2
     {
         static void Main(string[] args)
         {
-            ArrayList poem = new ArrayList();
+            List<Song> poem = new List<Song>();
             for (int i = 0; i < 5; i++)
             {
                 var song = new Song();
@@ -27,7 +27,7 @@ namespace Collections_Task2
             {
                 Console.WriteLine(item);
             }
-
+            
             Console.ReadLine();
         }
     }
