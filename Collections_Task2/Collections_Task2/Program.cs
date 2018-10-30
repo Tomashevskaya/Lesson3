@@ -12,7 +12,8 @@ namespace Collections_Task2
         static void Main(string[] args)
         {
             //ArrayListPoem();
-            NeighborList();
+            //NeighborList();
+            Dictionary();
             Console.ReadLine();
         }
 
@@ -63,11 +64,11 @@ namespace Collections_Task2
             public static void NeighborList()
             {
             Neighbor person = new Neighbor();
-            List<Neighbor> floorNeighbors = new List<Neighbor>();
+             List<Neighbor> floorNeighbors = new List<Neighbor>();
 
             floorNeighbors.Add(new Neighbor() { FullName = "Александр", FlatNumber = "34", PhoneNumber = 8949855 });
             floorNeighbors.Add(new Neighbor() { FullName = "Анастасия", FlatNumber = "35", PhoneNumber = 8894729 });
-            floorNeighbors.Add(new Neighbor() { FullName = "Ирина", FlatNumber = "37", PhoneNumber = 7164656 });
+            floorNeighbors.Add(new Neighbor() { FullName = "Ирина", FlatNumber = "37", PhoneNumber = 7164656 }); 
 
             Console.WriteLine("Введите номер квартиры: ");
             string numb = Convert.ToString(Console.ReadLine());
@@ -75,6 +76,19 @@ namespace Collections_Task2
             Console.WriteLine("Данные о соседе: \n{0}", floorNeighbors.Find(x => x.FlatNumber.Contains(numb)));
 
             }
+        public static void Dictionary()
+        {
+            Dictionary<int, Neighbor> dict = new Dictionary<int, Neighbor>(3);
+
+            dict.Add(34, new Neighbor() { FullName = "Александр", PhoneNumber = 8949855 });
+            dict.Add(35, new Neighbor() { FullName = "Анастасия", PhoneNumber = 8894729 });
+            dict.Add(37, new Neighbor() { FullName = "Ирина", PhoneNumber = 7164656 });
+
+
+            Console.WriteLine("Введите номер квартиры: ");
+            int numb = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Данные о соседе: \n{0}", dict[numb]);
+        }
     }
     
 }
